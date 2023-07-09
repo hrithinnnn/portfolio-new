@@ -36,8 +36,9 @@ html, body {  overflow: scroll;}
 }
 
 @keyframes blink {
-  to,from{ border-color: transparent }
+  0%{ border-color: transparent }
   50% { border-color: rgb(0, 0, 0) }
+  100%{ border-color: transparent }
 }
 
 @keyframes typing {
