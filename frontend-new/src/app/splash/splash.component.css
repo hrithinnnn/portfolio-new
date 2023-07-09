@@ -11,9 +11,8 @@ html, body {  overflow: scroll;}
   white-space: nowrap; 
   margin: 0 auto; 
   font-size:7rem;
-  animation: 
-    typing steps(30, end) 3.5s,
-    blink-caret step-end infinite .5s;
+  animation: blink-caret step-end infinite .5s;
+    animation :typing steps(30, end) 3.5s;
     font: 400 7em 'Noto Serif Lao', serif;
     animation-delay: 3.5s;
 }
