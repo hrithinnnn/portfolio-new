@@ -11,11 +11,12 @@ html, body {  overflow: scroll;}
   white-space: nowrap; 
   margin: 0 auto; 
   font-size:7rem;
-  animation: 
-    typing steps(30, end) 3.5s,
-    blinking  step-end infinite .5s;
-    font: 400 7em 'Noto Serif Lao', serif;
-    animation-delay: 3.5s;
+  animation-name: typing, blinking;
+  animation-duration: 3.5s, 0.5s;
+  animation-timing-function: steps(30, end), step-end;
+  animation-iteration-count: 1, infinite;
+  animation-delay: 3.5s, 3.5s;
+  font: 400 7em 'Noto Serif Lao', serif;
 }
 .typewriter h1.fname {
   color: #000000;
@@ -37,7 +38,7 @@ html, body {  overflow: scroll;}
   animation-duration: 3.5s, 0.5s;
   animation-timing-function: steps(30, end), step-end;
   animation-iteration-count: 1, infinite;
-  animation-delay: 3.5s, 0s;
+  animation-delay: 0s, 0s;
   font: 400 7em 'Noto Serif Lao', serif;
 }
 
