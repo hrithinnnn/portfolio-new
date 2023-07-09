@@ -30,8 +30,8 @@ html, body {  overflow: scroll;}
   /* letter-spacing: .15em; Adjust as needed */
   font-size:7rem;
   animation: 
-    typing  steps(30, end) 3.5s,
-    blinking  step-end infinite .5s;
+  blinking  step-end infinite .5s,
+    typing  steps(30, end) 3.5s;
   font: 400 7em 'Noto Serif Lao', serif;
 }
 
