@@ -15,7 +15,7 @@ export class ContactsComponent {
   @ViewChild('email') email: any;
   @ViewChild('comment') comment: any;
   constructor(private http:HttpClient,private _snackBar: MatSnackBar){}
-  API_URL="http://localhost:5000/"
+  API_URL="https://portfolio-backend-ljhx.onrender.com/"
   error = false;
   errorString=""
   openSnackBar(message: string) {
