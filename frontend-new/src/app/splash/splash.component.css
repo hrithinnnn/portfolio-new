@@ -35,15 +35,16 @@ html, body {  overflow: scroll;}
   font: 400 7em 'Noto Serif Lao', serif;
 }
 
+@keyframes blink-caret {
+  to,from{ border-color: transparent }
+  50% { border-color: rgb(0, 0, 0) }
+}
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-@keyframes blink-caret {
-  to,from{ border-color: transparent }
-  50% { border-color: rgb(0, 0, 0) }
-}
 
 .absolute{
   top:0px;
