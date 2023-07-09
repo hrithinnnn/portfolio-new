@@ -29,9 +29,15 @@ html, body {  overflow: scroll;}
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   /* letter-spacing: .15em; Adjust as needed */
   font-size:7rem;
-  animation: 
-  blinking  step-end infinite .5s,
-    typing  steps(30, end) 3.5s;
+  /* animation: 
+  blinking  step-end infinite .5s;
+  animation:
+    typing  steps(30, end) 3.5s; */
+  animation-name: typing, blinking;
+  animation-duration: 3.5s, 0.5s;
+  animation-timing-function: steps(30, end), step-end;
+  animation-iteration-count: 1, infinite;
+  animation-delay: 3.5s, 0s;
   font: 400 7em 'Noto Serif Lao', serif;
 }
 
@@ -44,6 +50,22 @@ html, body {  overflow: scroll;}
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
+}
+@keyframes combinedAnimation {
+  0% {
+    border-color: transparent;
+    width: 0;
+  }
+
+  50% {
+    border-color: rgb(0, 0, 0);
+    /* width: 100%; */
+  }
+
+  100% {
+    border-color: transparent;
+    width: 100%;
+  }
 }
 
 
