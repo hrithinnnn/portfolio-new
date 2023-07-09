@@ -52,9 +52,9 @@ export class ContactsComponent {
       this.error=true;
       return;
     }
-   
+    const date=new Date().toString()
 
-    this.add(company, fname, lname, email, comments).subscribe((ans)=>{
+    this.add(company, fname, lname, email, comments,date).subscribe((ans)=>{
     console.log(ans.message, ans.data)
     const comp=document.getElementById('company');
     const firstname=document.getElementById('fname');
@@ -73,8 +73,8 @@ export class ContactsComponent {
 
   }
 
-  add(company: string, fname: string, lname: string, email: string, comments: string){
-    return this.http.post(this.API_URL,{company, firstName:fname, lastName:lname, email, comments}, {
+  add(company: string, fname: string, lname: string, email: string, comments: string,date:string){
+    return this.http.post(this.API_URL,{date,company, firstName:fname, lastName:lname, email, comments}, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json; charset=utf-8',
       })
