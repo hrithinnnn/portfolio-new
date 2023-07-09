@@ -1,0 +1,141 @@
+/* For future ref */
+html, body {  overflow: scroll;}
+
+.typewriter h1.lname {
+  color: transparent;
+  font-weight:700;
+  opacity: 0.8;
+  max-width: fit-content;
+  font-family: monospace;
+  overflow: hidden; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  font-size:7rem;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+    font: 400 7em 'Noto Serif Lao', serif;
+    animation-delay: 3.5s;
+}
+.typewriter h1.fname {
+  color: #000000;
+  opacity: 0.8;
+  font-weight:700;
+  max-width: fit-content;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /* letter-spacing: .15em; Adjust as needed */
+  font-size:7rem;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+  font: 400 7em 'Noto Serif Lao', serif;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  to,from{ border-color: transparent }
+  50% { border-color: rgb(0, 0, 0) }
+}
+
+.absolute{
+  top:0px;
+  left:0px;
+}
+  
+.banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90%;
+  }
+
+  .image {
+    filter: sepia(100%);
+    transition: all 0.2s;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -47%);
+  height: 95%;
+  }
+
+  .image:hover {
+    filter: unset;
+    scale: 1.05;
+  }
+  
+.content {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+.name {
+  opacity: 0.8;
+  width:0;
+  font-weight:700;
+  font-family: 'Noto Serif Lao', serif;
+}
+
+.name .fname {
+  max-width: fit-content;
+}
+
+
+
+.name .lname {
+  max-width: fit-content;
+
+}
+
+.line {
+  min-width: fit-content;
+  /* padding-left: 10px; */
+  padding-right: 10px;
+  border-top: solid 3.5px;
+  transition: all 0.4s;
+  font-weight:500;
+  font-style: italic;
+  cursor:default;
+}
+
+.line:hover {
+  border-color: #045DE9;
+  background: -webkit-linear-gradient(0deg, #045DE9,#000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ 
+
+to-fade-in {
+	opacity: 0;
+}
+
+
+.to-fade-in.fade-in {
+	animation: fade-in 1s forwards;
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+   }
+	100% {
+		opacity: 1;
+   }
+}

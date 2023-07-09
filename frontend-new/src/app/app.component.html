@@ -1,0 +1,93 @@
+<ng-container *ngIf="loading">
+ 
+  <!-- <app-loading style="z-index: 2000; position: absolute;"></app-loading> -->
+
+</ng-container>
+
+<ng-container *ngIf="!loading">
+  
+  <mat-toolbar class="custom-toolbar" > 
+
+    <img style="filter: invert(100%); padding: 16px;" width="40px" src="../favicon.ico" alt="">
+
+    <div style="width: 100%; height: 100%;" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="25px">
+
+      <div *ngFor="let action of actions">
+
+        <div class="actions" (click)="goTo(action.name)"> {{ action.name }} </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+  </mat-toolbar>
+
+  <!-- <router-outlet></router-outlet> -->
+  <div class="" id="home" style="height:100vh;">
+    <app-splash></app-splash>
+  </div>
+  <section class="image0"></section>
+ 
+    <div class="" id="intro">
+      <section class="text">
+        <p>
+          <app-intro></app-intro>
+        </p>
+      </section>
+    </div>
+    <section class="image1 image-2"></section>
+    <section class="skill " >
+ <app-skills></app-skills>
+    </section>
+    <section class="image2 image-2"></section>
+    <div id="projects" class="">
+      
+    </div>
+      <app-project ></app-project>
+
+  <section class="image3 image-2"></section>
+
+  <section class="skill ">
+    <div class="p">
+      <div class="box slanted" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="100px">
+        <div style=" font-size: 22px;" fxFlex="60" class="elem to-fade-in fade-in to-fade-out fade-out">
+          <div style="padding-bottom: 10px" class="title">Other Projects<br><br></div>check out my other cool projects!
+        </div>
+        <div fxFlex="20">
+          <ul style="font-size: 22px; list-style-type: none;" class="elem to-fade-in fade-in to-fade-out fade-out">
+            plainview of this website: <br><br><br>
+            <button (click)="onNavigatePortfolio()"
+                    mat-raised-button style="color:black; background-color: #fff;">check it out!</button>
+          </ul>
+        </div>
+        <div fxFlex="20" style="font-size: 22px;" class="elem to-fade-in fade-in to-fade-out fade-out">
+          check out my github for more projects :D <br><br><br>
+          <button (click)="onNavigateGithub()"
+                    mat-raised-button style=" color: black; background-color: #fff;">github</button>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="image4 image-2"></section>
+  
+
+  <section id="contacts" class="">
+
+    <section class="text">
+      <p>
+        <app-contacts></app-contacts>
+      </p>
+    </section>
+  </section>
+  <section class="image5 image-2"></section>
+  <app-footer></app-footer>
+
+</ng-container>

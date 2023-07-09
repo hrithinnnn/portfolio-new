@@ -1,0 +1,83 @@
+
+    <div class="elem to-fade-in fade-in to-fade-out fade-out">
+
+
+        <div class="title">Reach out to me!</div>
+    
+        <div class="head1" style="padding-bottom: 30px;">Interested in working with me? These are where you can connect with
+            me
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="100px">
+    
+                <a href="https://github.com/hrithinnnn" target="_blank">
+                    <div class="icon github"></div>
+                </a>
+                <a href="https://www.linkedin.com/in/hrithin-ramji/" target="_blank">
+                    <div class="icon linkedin"></div>
+                </a>
+                <div class="text-left"><b>mail: hrithin2010161 <br>[at] ssn [dot] edu [dot] in</b></div>
+            </div>
+    
+            <div class="mat-elevation-z4">
+    
+                <div fxLayout="column" fxLayoutAlign="center center" style="padding: 10px;">
+    
+                    <mat-form-field fxFill>
+                        <mat-label>Company/instituition</mat-label>
+                        <input id="company" #company matInput placeholder="Ex. Lorem Ipsum Pvt. Ltd.">
+                    </mat-form-field>
+    
+                    <div fxLayout="row" fxLayoutGap="10px" fxFill>
+    
+                        <mat-form-field fxFlex="50">
+                            <mat-label>First Name</mat-label>
+                            <input id="fname" #fname matInput placeholder="Ex. John">
+                        </mat-form-field>
+    
+                        <mat-form-field fxFlex="50">
+                            <mat-label>Last Name</mat-label>
+                            <input id="lname" name="lname" #lname matInput placeholder="Ex. Doe">
+                        </mat-form-field>
+    
+                    </div>
+    
+                    <mat-form-field fxFill>
+                        <mat-label>Email</mat-label>
+                        <input id="email" #email type="email" matInput placeholder="Ex. pat@example.com">
+                    </mat-form-field>
+    
+                    <mat-form-field class="example-full-width" fxFill>
+                        <mat-label>Leave a comment</mat-label>
+                        <textarea id="comment" #comment matInput placeholder="Ex. It makes me feel..."></textarea>
+                    </mat-form-field>
+                    <mat-error *ngIf="error" style="padding-bottom: 10px;">
+                        {{errorString}} <br>
+                    </mat-error>
+    
+                    <button (click)="submit(company.value, fname.value, lname.value, email.value, comment.value)"
+                        mat-raised-button style="width: 300px; color: white;">Submit</button>
+    
+                </div>
+    
+    
+    
+            </div>
+            <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="100px">
+    
+                <a href="mailto:hrithin2010161@ssn.edu.in" target="_blank">
+                    <div class="icon mail"></div>
+                </a>
+                <a href="https://drive.google.com/file/d/1BOsjjJqGP_UaS1wbH_1-VgsbtV6dj5Gd/view?usp=sharing"
+                    target="_blank">
+                    <div class="icon resume">
+    
+                    </div>
+                </a>
+    
+                <div class="text-right"><b>phone: +91 9941669034</b></div>
+            </div>
+    
+    
+        </div>
+    </div>
