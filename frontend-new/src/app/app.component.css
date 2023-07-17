@@ -71,7 +71,7 @@ body {
     height: 150%;
     background-color: #000;
     translate: -50% -50%;
-    clip-path: polygon(0 14%, 100% 0, 100% 87%, 0% 100%);
+    clip-path: polygon(0% 16%, 100% 9%, 100% 84%, -150% 100%);
   }
 
 
